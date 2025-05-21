@@ -1,5 +1,5 @@
 {
-  "name": "NodeJS-Typescript-Template",
+  "name": "Nodejs server",
   "version": "1.0.0",
   "description": "NodeJS(Typescript) template for bootstrapping your app faster",
   "main": "app.ts",
@@ -48,6 +48,7 @@
     "@types/jsonwebtoken": "^9.0.1",
     "@types/node": "^22.15.2",
     "@types/nodemailer": "^6.4.7",
+    "@types/pdfkit": "^0.13.9",
     "@types/stream-buffers": "^3.0.7",
     "@types/swagger-jsdoc": "^6.0.1",
     "@types/swagger-ui-express": "^4.1.3",

@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors({ origin: "*" }))
 app.disable('x-powered-by');
 
-// app.use(requestLogger);
+app.use(requestLogger);
 
 app.use('/api/v1', router)
 // @ts-ignore: Unreachable code error
@@ -57,10 +57,10 @@ app.get('/api/v1/tickets/:plateNumber.pdf', async (req, res) => {
   }
 });
 
-// app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
-//   logger.error(`${err.message} - ${req.method} ${req.originalUrl}`);
-//   res.status(500).json({ message: "Internal server error" });
-// });
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  logger.error(`${err.message} - ${req.method} ${req.originalUrl}`);
+  res.status(500).json({ message: "Internal server error" });
+});
 
 
 server.listen(PORT, () => {
